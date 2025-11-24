@@ -16,8 +16,14 @@ map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
 -- copy/past
-map({"n", "v"}, "<leader>y", "\"+y", opts)
-map({"n", "v"}, "<leader>p", "\"+p", opts)
+map({ "n", "v" }, "<leader>y", "\"+y", opts)
+map({ "n", "v" }, "<leader>p", "\"+p", opts)
 
 -- formatting
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { noremap = true, silent = true })
+
+-- nvim-tree
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })
+
+-- lsp
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { noremap = true, silent = true })

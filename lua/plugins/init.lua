@@ -11,9 +11,15 @@ require("lazy").setup({
         version = '^6',
         lazy = false,
     },
-    
-    {"nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },},
+
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+    },
 
     -- Автодополнение
     { "hrsh7th/nvim-cmp" },
